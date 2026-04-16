@@ -8,7 +8,7 @@ function Loja() {
       nome: 'Camisa Oficial - Branca',
       preco: 'R$ 55,00',
       descricao: 'Malha fria de alta qualidade.',
-      imagem: '/logooficial.png' // Troque pela foto real da camisa depois
+      imagem: '/logooficial.png' 
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ function Loja() {
     }
   ];
 
-  const numeroWhatsApp = "558698036175"; // Coloque o número real do professor aqui (com DDD)
+  const numeroWhatsApp = "558698036175"; 
 
   const handleCompra = (produtoNome) => {
     const mensagem = encodeURIComponent(`Olá Professor Toquinho! Gostaria de saber mais sobre o produto: ${produtoNome}`);
@@ -37,13 +37,15 @@ function Loja() {
     <div className="min-h-screen bg-[#0a0a0a] text-gray-200 font-sans py-16 px-6">
       <div className="max-w-7xl mx-auto">
         
-        {/* Cabeçalho da Loja */}
+        {/* Cabeçalho da Loja - CORRIGIDO PARA NÃO QUEBRAR O TEXTO */}
         <div className="mb-16 text-center lg:text-left">
-          <h1 className="text-4xl md:text-5xl font-black text-white uppercase tracking-widest flex items-center justify-center lg:justify-start">
-            <ShoppingBag className="mr-4 text-red-600" size={40} />
-            Loja do <span className="text-red-600 ml-3">Grupo</span>
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-widest flex items-center justify-center lg:justify-start flex-nowrap">
+            <ShoppingBag className="mr-3 sm:mr-4 text-red-600 shrink-0" size={40} />
+            <span className="whitespace-nowrap">
+              Loja do <span className="text-red-600">Grupo</span>
+            </span>
           </h1>
-          <p className="text-gray-400 text-lg mt-4 max-w-2xl">
+          <p className="text-gray-400 text-sm md:text-lg mt-4 max-w-2xl">
             Adquira os uniformes oficiais e os acessórios do grupo.
           </p>
         </div>
